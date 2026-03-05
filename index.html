@@ -1,0 +1,2039 @@
+<!DOCTYPE html>
+<html lang="en-AU">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Woodend Paediatric Speech Pathology — Helping Macedon Ranges Kids Find Their Voice</title>
+  <meta name="description" content="Boutique paediatric speech pathology clinic in Woodend VIC. 35+ years experience. Articulation, language delays, apraxia, literacy, social skills and AAC therapy for children 0-18.">
+  <link rel="stylesheet" href="https://use.hugeicons.com/font/icons.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
+  <style>
+    @font-face {
+      font-family: 'Pally';
+      src: url('/fonts/pally-400.woff2') format('woff2');
+      font-weight: 400;
+      font-style: normal;
+      font-display: swap;
+    }
+    @font-face {
+      font-family: 'Pally';
+      src: url('/fonts/pally-700.woff2') format('woff2');
+      font-weight: 700;
+      font-style: normal;
+      font-display: swap;
+    }
+
+    /* ========================================
+       RESET & BASE
+       ======================================== */
+    *, *::before, *::after {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    :root {
+      --primary: #6B0D5F;
+      --primary-light: #8a2e7e;
+      --primary-dark: #520a49;
+      --secondary: #29849F;
+      --secondary-light: #3ba0be;
+      --secondary-dark: #1e6a80;
+      --white: #ffffff;
+      --cream: #FBF7F0;
+      --mint-light: #EFF8F6;
+      --charcoal: #2D2A32;
+      --charcoal-light: #4A4651;
+      --gray-400: #9B96A3;
+      --gray-200: #E8E5EC;
+      --radius-sm: 12px;
+      --radius-md: 20px;
+      --radius-lg: 24px;
+      --radius-pill: 50px;
+      --shadow-sm: 0 2px 8px rgba(107, 13, 95, 0.06);
+      --shadow-md: 0 4px 20px rgba(107, 13, 95, 0.08);
+      --shadow-lg: 0 8px 40px rgba(107, 13, 95, 0.12);
+      --font-heading: 'Pally', 'Comic Sans MS', cursive, sans-serif;
+      --font-body: 'DM Sans', system-ui, -apple-system, sans-serif;
+      --transition: 0.3s ease;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    body {
+      font-family: var(--font-body);
+      font-size: 18px;
+      line-height: 1.65;
+      color: var(--charcoal);
+      background-color: var(--white);
+      overflow-x: hidden;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+      font-family: var(--font-heading);
+      font-weight: 700;
+      line-height: 1.15;
+      color: var(--primary);
+    }
+
+    /* ========================================
+       UTILITIES
+       ======================================== */
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    .eyebrow {
+      font-family: var(--font-body);
+      font-size: 13px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--secondary);
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 16px;
+    }
+
+    .eyebrow--pill {
+      background: rgba(41, 132, 159, 0.1);
+      padding: 8px 20px;
+      border-radius: var(--radius-pill);
+    }
+
+    .section-heading {
+      font-size: clamp(32px, 5vw, 46px);
+      margin-bottom: 16px;
+      max-width: 700px;
+    }
+
+    .section-lede {
+      font-size: 19px;
+      color: var(--charcoal-light);
+      max-width: 620px;
+      line-height: 1.7;
+    }
+
+    .section-header {
+      margin-bottom: 56px;
+    }
+
+    .section-header--center {
+      text-align: center;
+    }
+
+    .section-header--center .section-heading,
+    .section-header--center .section-lede {
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      font-family: var(--font-body);
+      font-size: 16px;
+      font-weight: 700;
+      padding: 16px 36px;
+      border-radius: var(--radius-pill);
+      border: 2px solid transparent;
+      cursor: pointer;
+      transition: all var(--transition);
+      text-decoration: none;
+      white-space: nowrap;
+    }
+
+    .btn i {
+      font-size: 18px;
+      transition: transform var(--transition);
+    }
+
+    .btn:hover i {
+      transform: translateX(3px);
+    }
+
+    .btn--primary {
+      background: var(--secondary);
+      color: var(--white);
+      border-color: var(--secondary);
+    }
+
+    .btn--primary:hover {
+      background: var(--secondary-dark);
+      border-color: var(--secondary-dark);
+      transform: translateY(-2px);
+      box-shadow: 0 6px 24px rgba(41, 132, 159, 0.3);
+    }
+
+    .btn--outline {
+      background: transparent;
+      color: var(--primary);
+      border-color: var(--primary);
+    }
+
+    .btn--outline:hover {
+      background: var(--primary);
+      color: var(--white);
+      transform: translateY(-2px);
+    }
+
+    .btn--white {
+      background: var(--white);
+      color: var(--primary);
+      border-color: var(--white);
+    }
+
+    .btn--white:hover {
+      background: var(--cream);
+      border-color: var(--cream);
+      transform: translateY(-2px);
+      box-shadow: 0 6px 24px rgba(255, 255, 255, 0.3);
+    }
+
+    /* Reveal animation base */
+    .reveal {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: opacity 0.7s ease, transform 0.7s ease;
+    }
+
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .reveal-delay-1 { transition-delay: 0.1s; }
+    .reveal-delay-2 { transition-delay: 0.2s; }
+    .reveal-delay-3 { transition-delay: 0.3s; }
+    .reveal-delay-4 { transition-delay: 0.4s; }
+    .reveal-delay-5 { transition-delay: 0.5s; }
+
+    /* ========================================
+       HEADER / NAV
+       ======================================== */
+    .site-header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 1000;
+      background: rgba(255, 255, 255, 0.95);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(107, 13, 95, 0.06);
+      transition: box-shadow var(--transition);
+    }
+
+    .site-header.scrolled {
+      box-shadow: var(--shadow-sm);
+    }
+
+    .header-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 76px;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .logo img {
+      height: 48px;
+      width: auto;
+      border-radius: 8px;
+    }
+
+    .logo-text {
+      font-family: var(--font-heading);
+      font-size: 18px;
+      font-weight: 700;
+      color: var(--primary);
+      line-height: 1.2;
+    }
+
+    .logo-text span {
+      display: block;
+      font-family: var(--font-body);
+      font-size: 12px;
+      font-weight: 500;
+      color: var(--secondary);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    .nav-desktop {
+      display: none;
+      align-items: center;
+      gap: 36px;
+    }
+
+    .nav-desktop a {
+      font-size: 15px;
+      font-weight: 500;
+      color: var(--charcoal-light);
+      transition: color var(--transition);
+    }
+
+    .nav-desktop a:hover {
+      color: var(--primary);
+    }
+
+    .nav-cta {
+      display: none;
+    }
+
+    .hamburger {
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 8px;
+      z-index: 1001;
+    }
+
+    .hamburger span {
+      display: block;
+      width: 24px;
+      height: 2.5px;
+      background: var(--primary);
+      border-radius: 2px;
+      transition: all var(--transition);
+    }
+
+    .hamburger.active span:nth-child(1) {
+      transform: rotate(45deg) translate(5px, 5px);
+    }
+
+    .hamburger.active span:nth-child(2) {
+      opacity: 0;
+    }
+
+    .hamburger.active span:nth-child(3) {
+      transform: rotate(-45deg) translate(5px, -5px);
+    }
+
+    .mobile-menu {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: var(--white);
+      z-index: 999;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 32px;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity var(--transition);
+    }
+
+    .mobile-menu.open {
+      opacity: 1;
+      pointer-events: all;
+    }
+
+    .mobile-menu a {
+      font-family: var(--font-heading);
+      font-size: 28px;
+      font-weight: 700;
+      color: var(--primary);
+      transition: color var(--transition);
+    }
+
+    .mobile-menu a:hover {
+      color: var(--secondary);
+    }
+
+    .mobile-menu .btn {
+      margin-top: 16px;
+    }
+
+    /* ========================================
+       HERO — Split Left
+       ======================================== */
+    .hero {
+      padding: 120px 0 80px;
+      background: var(--white);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: -120px;
+      right: -100px;
+      width: 400px;
+      height: 400px;
+      background: radial-gradient(circle, rgba(41, 132, 159, 0.08) 0%, transparent 70%);
+      border-radius: 50%;
+      pointer-events: none;
+    }
+
+    .hero::after {
+      content: '';
+      position: absolute;
+      bottom: -60px;
+      left: -80px;
+      width: 300px;
+      height: 300px;
+      background: radial-gradient(circle, rgba(107, 13, 95, 0.06) 0%, transparent 70%);
+      border-radius: 50%;
+      pointer-events: none;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 48px;
+      align-items: center;
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 2;
+    }
+
+    .hero h1 {
+      font-size: clamp(36px, 6vw, 60px);
+      line-height: 1.1;
+      margin-bottom: 24px;
+      color: var(--primary);
+    }
+
+    .hero h1 .highlight {
+      color: var(--secondary);
+      position: relative;
+    }
+
+    .hero h1 .highlight::after {
+      content: '';
+      position: absolute;
+      bottom: 2px;
+      left: 0;
+      right: 0;
+      height: 6px;
+      background: rgba(41, 132, 159, 0.2);
+      border-radius: 3px;
+    }
+
+    .hero-text {
+      font-size: 20px;
+      color: var(--charcoal-light);
+      line-height: 1.7;
+      max-width: 520px;
+      margin-bottom: 36px;
+    }
+
+    .hero-buttons {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .hero-trust {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 40px;
+      padding-top: 32px;
+      border-top: 1px solid var(--gray-200);
+    }
+
+    .trust-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 13px;
+      font-weight: 500;
+      color: var(--charcoal-light);
+      background: var(--cream);
+      padding: 10px 18px;
+      border-radius: var(--radius-pill);
+    }
+
+    .trust-badge i {
+      font-size: 18px;
+      color: var(--secondary);
+    }
+
+    .hero-image {
+      position: relative;
+      z-index: 2;
+    }
+
+    .hero-image-wrapper {
+      position: relative;
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+    }
+
+    .hero-image-wrapper img {
+      width: 100%;
+      height: auto;
+      aspect-ratio: 4 / 3;
+      object-fit: cover;
+    }
+
+    /* Organic blob decorations */
+    .blob {
+      position: absolute;
+      border-radius: 50%;
+      pointer-events: none;
+      z-index: 1;
+    }
+
+    .blob--teal {
+      width: 120px;
+      height: 120px;
+      background: rgba(41, 132, 159, 0.12);
+      top: -30px;
+      right: -30px;
+    }
+
+    .blob--plum {
+      width: 80px;
+      height: 80px;
+      background: rgba(107, 13, 95, 0.1);
+      bottom: -20px;
+      left: -20px;
+    }
+
+    /* ========================================
+       PAIN / CONCERNS SECTION
+       ======================================== */
+    .pain {
+      padding: 96px 0;
+      background: var(--cream);
+    }
+
+    .pain-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 24px;
+    }
+
+    .pain-card {
+      background: var(--white);
+      border-radius: var(--radius-md);
+      padding: 32px;
+      box-shadow: var(--shadow-sm);
+      display: flex;
+      gap: 20px;
+      align-items: flex-start;
+      transition: transform var(--transition), box-shadow var(--transition);
+    }
+
+    .pain-card:hover {
+      transform: translateY(-3px);
+      box-shadow: var(--shadow-md);
+    }
+
+    .pain-icon {
+      flex-shrink: 0;
+      width: 52px;
+      height: 52px;
+      background: rgba(107, 13, 95, 0.07);
+      border-radius: 16px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .pain-icon i {
+      font-size: 24px;
+      color: var(--primary);
+    }
+
+    .pain-card h3 {
+      font-size: 20px;
+      margin-bottom: 8px;
+      font-weight: 700;
+    }
+
+    .pain-card p {
+      font-size: 16px;
+      color: var(--charcoal-light);
+      line-height: 1.65;
+    }
+
+    /* ========================================
+       SERVICES — Elevated Cards
+       ======================================== */
+    .services {
+      padding: 104px 0;
+      background: var(--white);
+    }
+
+    .services-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 28px;
+    }
+
+    .service-card {
+      background: var(--white);
+      border-radius: var(--radius-md);
+      overflow: hidden;
+      box-shadow: var(--shadow-md);
+      transition: transform var(--transition), box-shadow var(--transition);
+    }
+
+    .service-card:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-lg);
+    }
+
+    .service-card-image {
+      aspect-ratio: 16 / 10;
+      overflow: hidden;
+    }
+
+    .service-card-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.5s ease;
+    }
+
+    .service-card:hover .service-card-image img {
+      transform: scale(1.03);
+    }
+
+    .service-card-body {
+      padding: 32px;
+    }
+
+    .service-card-icon {
+      width: 48px;
+      height: 48px;
+      border-radius: 14px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 16px;
+    }
+
+    .service-card-icon i {
+      font-size: 22px;
+    }
+
+    .service-card-icon--teal {
+      background: rgba(41, 132, 159, 0.1);
+    }
+
+    .service-card-icon--teal i {
+      color: var(--secondary);
+    }
+
+    .service-card-icon--plum {
+      background: rgba(107, 13, 95, 0.08);
+    }
+
+    .service-card-icon--plum i {
+      color: var(--primary);
+    }
+
+    .service-card-icon--mint {
+      background: rgba(41, 132, 159, 0.08);
+    }
+
+    .service-card-icon--mint i {
+      color: var(--secondary-dark);
+    }
+
+    .service-card h3 {
+      font-size: 22px;
+      margin-bottom: 10px;
+      font-weight: 700;
+    }
+
+    .service-card p {
+      font-size: 16px;
+      color: var(--charcoal-light);
+      line-height: 1.7;
+    }
+
+    /* ========================================
+       SOCIAL PROOF — Dark Stats
+       ======================================== */
+    .social-proof {
+      padding: 88px 0;
+      background: var(--primary);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .social-proof::before {
+      content: '';
+      position: absolute;
+      top: -100px;
+      right: -100px;
+      width: 350px;
+      height: 350px;
+      background: radial-gradient(circle, rgba(41, 132, 159, 0.15) 0%, transparent 70%);
+      border-radius: 50%;
+      pointer-events: none;
+    }
+
+    .social-proof .eyebrow {
+      color: rgba(255, 255, 255, 0.7);
+      background: rgba(255, 255, 255, 0.1);
+    }
+
+    .social-proof .section-heading {
+      color: var(--white);
+    }
+
+    .social-proof .section-lede {
+      color: rgba(255, 255, 255, 0.8);
+    }
+
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 32px;
+    }
+
+    .stat-item {
+      text-align: center;
+      padding: 24px 16px;
+    }
+
+    .stat-number {
+      font-family: var(--font-heading);
+      font-size: clamp(40px, 6vw, 56px);
+      font-weight: 700;
+      color: var(--white);
+      line-height: 1;
+      margin-bottom: 8px;
+    }
+
+    .stat-number .accent {
+      color: var(--secondary-light);
+    }
+
+    .stat-label {
+      font-size: 15px;
+      color: rgba(255, 255, 255, 0.7);
+      font-weight: 500;
+    }
+
+    .proof-quote {
+      margin-top: 56px;
+      padding-top: 48px;
+      border-top: 1px solid rgba(255, 255, 255, 0.12);
+      position: relative;
+    }
+
+    .proof-quote-mark {
+      font-family: var(--font-heading);
+      font-size: 80px;
+      color: var(--secondary);
+      line-height: 0.8;
+      position: absolute;
+      top: 40px;
+      left: 0;
+      opacity: 0.4;
+    }
+
+    .proof-quote blockquote {
+      font-size: 20px;
+      color: rgba(255, 255, 255, 0.9);
+      font-style: italic;
+      line-height: 1.7;
+      padding-left: 40px;
+      max-width: 700px;
+    }
+
+    .proof-quote cite {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-top: 20px;
+      padding-left: 40px;
+      font-style: normal;
+    }
+
+    .proof-quote cite .cite-badge {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 14px;
+      color: rgba(255, 255, 255, 0.6);
+    }
+
+    .proof-quote cite .cite-badge i {
+      color: var(--secondary-light);
+      font-size: 16px;
+    }
+
+    /* ========================================
+       GALLERY — Image Grid
+       ======================================== */
+    .gallery {
+      padding: 104px 0;
+      background: var(--mint-light);
+    }
+
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 20px;
+    }
+
+    .gallery-item {
+      border-radius: var(--radius-md);
+      overflow: hidden;
+      position: relative;
+    }
+
+    .gallery-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      aspect-ratio: 4 / 3;
+      transition: transform 0.5s ease;
+    }
+
+    .gallery-item:hover img {
+      transform: scale(1.03);
+    }
+
+    .gallery-item-overlay {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      padding: 24px;
+      background: linear-gradient(to top, rgba(107, 13, 95, 0.7) 0%, transparent 100%);
+      color: var(--white);
+      opacity: 0;
+      transition: opacity var(--transition);
+    }
+
+    .gallery-item:hover .gallery-item-overlay {
+      opacity: 1;
+    }
+
+    .gallery-item-overlay p {
+      font-size: 15px;
+      font-weight: 500;
+    }
+
+    /* ========================================
+       PROCESS — Horizontal Steps
+       ======================================== */
+    .process {
+      padding: 104px 0;
+      background: var(--white);
+    }
+
+    .process-steps {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 32px;
+      counter-reset: step;
+    }
+
+    .process-step {
+      text-align: center;
+      position: relative;
+      padding: 32px 24px;
+    }
+
+    .step-number {
+      font-family: var(--font-heading);
+      font-size: 48px;
+      font-weight: 700;
+      color: rgba(41, 132, 159, 0.15);
+      line-height: 1;
+      margin-bottom: 16px;
+    }
+
+    .step-icon {
+      width: 64px;
+      height: 64px;
+      border-radius: 50%;
+      background: var(--mint-light);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 20px;
+    }
+
+    .step-icon i {
+      font-size: 26px;
+      color: var(--secondary);
+    }
+
+    .process-step h3 {
+      font-size: 22px;
+      margin-bottom: 10px;
+    }
+
+    .process-step p {
+      font-size: 16px;
+      color: var(--charcoal-light);
+      line-height: 1.65;
+      max-width: 280px;
+      margin: 0 auto;
+    }
+
+    .process-connector {
+      display: none;
+    }
+
+    /* ========================================
+       FAQ — Centered Accordion
+       ======================================== */
+    .faq {
+      padding: 104px 0;
+      background: var(--cream);
+    }
+
+    .faq-list {
+      max-width: 780px;
+      margin: 0 auto;
+    }
+
+    .faq-item {
+      border-bottom: 1px solid var(--gray-200);
+    }
+
+    .faq-item:first-child {
+      border-top: 1px solid var(--gray-200);
+    }
+
+    .faq-question {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+      padding: 24px 0;
+      background: none;
+      border: none;
+      cursor: pointer;
+      text-align: left;
+      font-family: var(--font-heading);
+      font-size: 19px;
+      font-weight: 700;
+      color: var(--primary);
+      transition: color var(--transition);
+    }
+
+    .faq-question:hover {
+      color: var(--secondary);
+    }
+
+    .faq-question i {
+      font-size: 20px;
+      color: var(--secondary);
+      transition: transform var(--transition);
+      flex-shrink: 0;
+    }
+
+    .faq-item.active .faq-question i {
+      transform: rotate(45deg);
+    }
+
+    .faq-answer {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.4s ease, padding 0.4s ease;
+    }
+
+    .faq-answer-inner {
+      padding-bottom: 24px;
+      font-size: 17px;
+      color: var(--charcoal-light);
+      line-height: 1.7;
+    }
+
+    /* ========================================
+       CTA BANNER — Split Image
+       ======================================== */
+    .cta-banner {
+      padding: 88px 0;
+      background: var(--primary);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .cta-banner::after {
+      content: '';
+      position: absolute;
+      bottom: -80px;
+      right: -60px;
+      width: 300px;
+      height: 300px;
+      background: radial-gradient(circle, rgba(41, 132, 159, 0.2) 0%, transparent 70%);
+      border-radius: 50%;
+      pointer-events: none;
+    }
+
+    .cta-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 48px;
+      align-items: center;
+    }
+
+    .cta-content {
+      position: relative;
+      z-index: 2;
+    }
+
+    .cta-banner .eyebrow {
+      color: rgba(255, 255, 255, 0.7);
+      background: rgba(255, 255, 255, 0.1);
+    }
+
+    .cta-banner h2 {
+      font-size: clamp(32px, 5vw, 46px);
+      color: var(--white);
+      margin-bottom: 20px;
+    }
+
+    .cta-banner p {
+      font-size: 19px;
+      color: rgba(255, 255, 255, 0.8);
+      line-height: 1.7;
+      margin-bottom: 32px;
+      max-width: 480px;
+    }
+
+    .cta-contact-row {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      margin-top: 32px;
+    }
+
+    .cta-contact-item {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      color: rgba(255, 255, 255, 0.8);
+      font-size: 16px;
+    }
+
+    .cta-contact-item i {
+      font-size: 20px;
+      color: var(--secondary-light);
+    }
+
+    .cta-contact-item a {
+      color: rgba(255, 255, 255, 0.9);
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+
+    .cta-contact-item a:hover {
+      color: var(--white);
+    }
+
+    .cta-image-wrapper {
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      position: relative;
+      z-index: 2;
+    }
+
+    .cta-image-wrapper img {
+      width: 100%;
+      aspect-ratio: 4 / 3;
+      object-fit: cover;
+    }
+
+    /* ========================================
+       FOOTER
+       ======================================== */
+    .site-footer {
+      padding: 64px 0 32px;
+      background: var(--charcoal);
+      color: rgba(255, 255, 255, 0.7);
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 40px;
+      margin-bottom: 48px;
+    }
+
+    .footer-brand .logo-text {
+      color: var(--white);
+      font-size: 20px;
+      margin-bottom: 16px;
+    }
+
+    .footer-brand .logo-text span {
+      color: var(--secondary-light);
+    }
+
+    .footer-brand p {
+      font-size: 15px;
+      line-height: 1.7;
+      max-width: 300px;
+    }
+
+    .footer-column h4 {
+      font-family: var(--font-body);
+      font-size: 14px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: rgba(255, 255, 255, 0.5);
+      margin-bottom: 20px;
+    }
+
+    .footer-column ul {
+      list-style: none;
+    }
+
+    .footer-column li {
+      margin-bottom: 12px;
+    }
+
+    .footer-column a {
+      font-size: 15px;
+      color: rgba(255, 255, 255, 0.7);
+      transition: color var(--transition);
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .footer-column a:hover {
+      color: var(--white);
+    }
+
+    .footer-column a i {
+      font-size: 16px;
+      color: var(--secondary-light);
+    }
+
+    .footer-bottom {
+      padding-top: 32px;
+      border-top: 1px solid rgba(255, 255, 255, 0.08);
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      font-size: 13px;
+      color: rgba(255, 255, 255, 0.4);
+    }
+
+    .footer-bottom a {
+      color: rgba(255, 255, 255, 0.5);
+      text-decoration: underline;
+      text-underline-offset: 2px;
+    }
+
+    .footer-bottom a:hover {
+      color: var(--white);
+    }
+
+    .footer-credits {
+      font-size: 12px;
+      color: rgba(255, 255, 255, 0.3);
+      line-height: 1.6;
+    }
+
+    /* ========================================
+       RESPONSIVE — Tablet (768px)
+       ======================================== */
+    @media (min-width: 768px) {
+      .hero {
+        padding: 140px 0 96px;
+      }
+
+      .hero-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 48px;
+      }
+
+      .hero-buttons {
+        flex-direction: row;
+        gap: 16px;
+      }
+
+      .hero-trust {
+        gap: 12px;
+      }
+
+      .pain-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .services-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .stats-grid {
+        grid-template-columns: repeat(4, 1fr);
+      }
+
+      .gallery-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .process-steps {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .cta-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .cta-contact-row {
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 24px;
+      }
+
+      .footer-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .footer-bottom {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+      }
+    }
+
+    /* ========================================
+       RESPONSIVE — Desktop (1100px)
+       ======================================== */
+    @media (min-width: 1100px) {
+      .container {
+        padding: 0 48px;
+      }
+
+      .nav-desktop {
+        display: flex;
+      }
+
+      .nav-cta {
+        display: inline-flex;
+      }
+
+      .hamburger {
+        display: none;
+      }
+
+      .hero {
+        padding: 160px 0 112px;
+      }
+
+      .hero-grid {
+        grid-template-columns: 1fr 1.05fr;
+        gap: 64px;
+      }
+
+      .hero h1 {
+        font-size: 58px;
+      }
+
+      .hero-image-wrapper img {
+        aspect-ratio: 3 / 4;
+      }
+
+      .pain {
+        padding: 112px 0;
+      }
+
+      .pain-grid {
+        grid-template-columns: repeat(4, 1fr);
+      }
+
+      .pain-card {
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+        padding: 36px 28px;
+      }
+
+      .services {
+        padding: 120px 0;
+      }
+
+      .services-grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+
+      .gallery-grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+
+      .gallery-grid .gallery-item:first-child {
+        grid-row: span 2;
+      }
+
+      .gallery-grid .gallery-item:first-child img {
+        aspect-ratio: auto;
+        height: 100%;
+      }
+
+      .process-steps {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 24px;
+      }
+
+      .process-connector {
+        display: block;
+        position: absolute;
+        top: 80px;
+        right: -20px;
+        color: var(--gray-400);
+        font-size: 20px;
+      }
+
+      .process-step:last-child .process-connector {
+        display: none;
+      }
+
+      .footer-grid {
+        grid-template-columns: 1.5fr 1fr 1fr 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ======================================== HEADER ======================================== -->
+  <header class="site-header">
+    <div class="container">
+      <div class="header-inner">
+        <a href="#" class="logo">
+          <img src="/logo.jpg" alt="Woodend Paediatric Speech Pathology logo">
+          <div class="logo-text">
+            Woodend Speech
+            <span>Paediatric Speech Pathology</span>
+          </div>
+        </a>
+        <nav class="nav-desktop">
+          <a href="#services">Services</a>
+          <a href="#about">About</a>
+          <a href="#process">How It Works</a>
+          <a href="#faq">FAQs</a>
+          <a href="tel:0419323095" class="btn btn--primary nav-cta" style="padding:12px 28px; font-size:15px;">
+            <i class="hgi-stroke hgi-call"></i>
+            Call 0419 323 095
+          </a>
+        </nav>
+        <button class="hamburger" aria-label="Toggle menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Menu -->
+  <div class="mobile-menu">
+    <a href="#services">Services</a>
+    <a href="#about">About</a>
+    <a href="#process">How It Works</a>
+    <a href="#faq">FAQs</a>
+    <a href="tel:0419323095" class="btn btn--primary">
+      <i class="hgi-stroke hgi-call"></i>
+      Call Now
+    </a>
+  </div>
+
+  <!-- ======================================== HERO ======================================== -->
+  <section class="hero">
+    <div class="container">
+      <div class="hero-grid">
+        <div class="hero-content reveal">
+          <span class="eyebrow eyebrow--pill">
+            <i class="hgi-stroke hgi-location-01"></i>
+            Woodend, Macedon Ranges
+          </span>
+          <h1>Helping kids find their <span class="highlight">voice</span></h1>
+          <p class="hero-text">Boutique paediatric speech pathology in the heart of the Macedon Ranges. Over 35 years of experience helping children communicate clearly, read confidently, and connect with the world around them.</p>
+          <div class="hero-buttons">
+            <a href="tel:0419323095" class="btn btn--primary">
+              <i class="hgi-stroke hgi-call"></i>
+              Book a Session
+            </a>
+            <a href="mailto:info@woodendspeech.com.au" class="btn btn--outline">
+              <i class="hgi-stroke hgi-mail-01"></i>
+              Send an Enquiry
+            </a>
+          </div>
+          <div class="hero-trust">
+            <span class="trust-badge">
+              <i class="hgi-stroke hgi-award-02"></i>
+              Business Excellence Finalist
+            </span>
+            <span class="trust-badge">
+              <i class="hgi-stroke hgi-checkmark-badge-02"></i>
+              Certified Practising SPA Member
+            </span>
+            <span class="trust-badge">
+              <i class="hgi-stroke hgi-book-open-01"></i>
+              ADA Dyslexia Accredited
+            </span>
+          </div>
+        </div>
+        <div class="hero-image reveal reveal-delay-2">
+          <div class="hero-image-wrapper">
+            <div class="blob blob--teal"></div>
+            <div class="blob blob--plum"></div>
+            <img
+              src="https://images.unsplash.com/photo-1620415069538-d8763e2fa2f5?ixid=M3w4ODc5NzR8MHwxfHNlYXJjaHwxfHxzcGVlY2glMjB0aGVyYXB5JTIwY2hpbGR8ZW58MXwwfHx8MTc3MjY4Nzc4NHww&ixlib=rb-4.1.0&w=1600&h=900&fit=crop&q=80"
+              alt="Child in a speech therapy session, working with a therapist"
+              width="1600"
+              height="900"
+              loading="eager"
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================================== PAIN / CONCERNS ======================================== -->
+  <section class="pain" id="about">
+    <div class="container">
+      <div class="section-header section-header--center reveal">
+        <span class="eyebrow eyebrow--pill">Sound Familiar?</span>
+        <h2 class="section-heading">Every parent wants the best start for their child</h2>
+        <p class="section-lede">If you have noticed any of these signs, early intervention with a specialist paediatric speech pathologist can make a real difference.</p>
+      </div>
+      <div class="pain-grid">
+        <div class="pain-card reveal reveal-delay-1">
+          <div class="pain-icon">
+            <i class="hgi-stroke hgi-voice"></i>
+          </div>
+          <div>
+            <h3>Hard to Understand</h3>
+            <p>Other people struggle to understand what your child is saying, even though you know what they mean.</p>
+          </div>
+        </div>
+        <div class="pain-card reveal reveal-delay-2">
+          <div class="pain-icon">
+            <i class="hgi-stroke hgi-bubble-chat"></i>
+          </div>
+          <div>
+            <h3>Late to Talk</h3>
+            <p>Your child is not using as many words or sentences as other kids their age, and you are worried they are falling behind.</p>
+          </div>
+        </div>
+        <div class="pain-card reveal reveal-delay-3">
+          <div class="pain-icon">
+            <i class="hgi-stroke hgi-book-open-01"></i>
+          </div>
+          <div>
+            <h3>Reading Struggles</h3>
+            <p>School is getting harder. Your child avoids reading, mixes up letters, or cannot sound out new words.</p>
+          </div>
+        </div>
+        <div class="pain-card reveal reveal-delay-4">
+          <div class="pain-icon">
+            <i class="hgi-stroke hgi-clock-01"></i>
+          </div>
+          <div>
+            <h3>Long Wait Times</h3>
+            <p>Public services have months-long waitlists, and travelling to Melbourne for specialist care is not realistic for your family.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================================== SERVICES ======================================== -->
+  <section class="services" id="services">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="eyebrow eyebrow--pill">What We Help With</span>
+        <h2 class="section-heading">Specialist therapy, right here in Woodend</h2>
+        <p class="section-lede">Our team of four experienced speech pathologists covers the full range of paediatric communication needs, from first words to high school.</p>
+      </div>
+      <div class="services-grid">
+        <div class="service-card reveal reveal-delay-1">
+          <div class="service-card-image">
+            <img
+              src="https://images.unsplash.com/photo-1723035092325-03ad613d3dae?ixid=M3w4ODc5NzR8MHwxfHNlYXJjaHwyfHxzcGVlY2glMjB0aGVyYXB5JTIwY2hpbGR8ZW58MXwwfHx8MTc3MjY4Nzc4NHww&ixlib=rb-4.1.0&w=800&h=600&fit=crop&q=80"
+              alt="Young boy engaged in a speech therapy activity"
+              width="800"
+              height="600"
+              loading="lazy"
+            >
+          </div>
+          <div class="service-card-body">
+            <div class="service-card-icon service-card-icon--teal">
+              <i class="hgi-stroke hgi-voice"></i>
+            </div>
+            <h3>Speech Clarity</h3>
+            <p>Articulation therapy and Childhood Apraxia of Speech (CAS) treatment to help your child speak clearly and be understood by everyone, not just family.</p>
+          </div>
+        </div>
+        <div class="service-card reveal reveal-delay-2">
+          <div class="service-card-image">
+            <img
+              src="https://images.unsplash.com/photo-1549737221-bef65e2604a6?ixid=M3w4ODc5NzR8MHwxfHNlYXJjaHwxfHxjaGlsZCUyMGxlYXJuaW5nJTIwdG8lMjByZWFkfGVufDF8MHx8fDE3NzI2ODk2ODB8MA&ixlib=rb-4.1.0&w=800&h=600&fit=crop&q=80"
+              alt="Girl reading a book, learning to read"
+              width="800"
+              height="600"
+              loading="lazy"
+            >
+          </div>
+          <div class="service-card-body">
+            <div class="service-card-icon service-card-icon--plum">
+              <i class="hgi-stroke hgi-brain-02"></i>
+            </div>
+            <h3>Language Development</h3>
+            <p>Targeted support for vocabulary, grammar, sentence structure, and comprehension. We use Hanen programs and evidence-based strategies that parents can use at home.</p>
+          </div>
+        </div>
+        <div class="service-card reveal reveal-delay-3">
+          <div class="service-card-image">
+            <img
+              src="https://images.unsplash.com/photo-1637195141628-f0f75585a07f?ixid=M3w4ODc5NzR8MHwxfHNlYXJjaHwyfHxjaGlsZCUyMGxlYXJuaW5nJTIwdG8lMjByZWFkfGVufDF8MHx8fDE3NzI2ODk2ODB8MA&ixlib=rb-4.1.0&w=800&h=600&fit=crop&q=80"
+              alt="Little girl reading in a comfortable chair"
+              width="800"
+              height="600"
+              loading="lazy"
+            >
+          </div>
+          <div class="service-card-body">
+            <div class="service-card-icon service-card-icon--mint">
+              <i class="hgi-stroke hgi-book-open-01"></i>
+            </div>
+            <h3>Literacy &amp; Phonological Awareness</h3>
+            <p>Early literacy skills that set your child up for reading and spelling success. ADA Dyslexia Accredited therapy using structured, evidence-based approaches.</p>
+          </div>
+        </div>
+        <div class="service-card reveal reveal-delay-1">
+          <div class="service-card-body">
+            <div class="service-card-icon service-card-icon--plum">
+              <i class="hgi-stroke hgi-bubble-chat"></i>
+            </div>
+            <h3>Social Skills &amp; Pragmatic Language</h3>
+            <p>Programs like Talkabout and Social Thinking help children build friendships, read social cues, and navigate conversations with confidence.</p>
+          </div>
+        </div>
+        <div class="service-card reveal reveal-delay-2">
+          <div class="service-card-body">
+            <div class="service-card-icon service-card-icon--teal">
+              <i class="hgi-stroke hgi-checkmark-circle-02"></i>
+            </div>
+            <h3>AAC &amp; Alternative Communication</h3>
+            <p>PECS, LAMP, PODD, and Key Word Signing for children who need support beyond spoken words. We find the right system for your child and teach the whole family how to use it.</p>
+          </div>
+        </div>
+        <div class="service-card reveal reveal-delay-3">
+          <div class="service-card-body">
+            <div class="service-card-icon service-card-icon--mint">
+              <i class="hgi-stroke hgi-stethoscope"></i>
+            </div>
+            <h3>Coordinated Care</h3>
+            <p>We work directly with your child's teachers, OTs, psychologists, GPs, and paediatricians to make sure everyone is pulling in the same direction.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================================== SOCIAL PROOF ======================================== -->
+  <section class="social-proof">
+    <div class="container">
+      <div class="section-header section-header--center reveal">
+        <span class="eyebrow eyebrow--pill">Trusted in the Macedon Ranges</span>
+        <h2 class="section-heading">23 years of helping local families</h2>
+      </div>
+      <div class="stats-grid reveal">
+        <div class="stat-item">
+          <div class="stat-number">35<span class="accent">+</span></div>
+          <div class="stat-label">Years of Experience</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-number">4</div>
+          <div class="stat-label">Speech Pathologists</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-number">23<span class="accent">+</span></div>
+          <div class="stat-label">Years in Woodend</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-number">0<span class="accent">-18</span></div>
+          <div class="stat-label">Ages We Support</div>
+        </div>
+      </div>
+      <div class="proof-quote reveal reveal-delay-2">
+        <span class="proof-quote-mark">"</span>
+        <blockquote>
+          Finalist in the Excellence in Professional Services category at the Bendigo Bank Macedon Ranges Business Excellence Awards. A recognition of our commitment to high-quality, evidence-based care for every family we work with.
+        </blockquote>
+        <cite>
+          <span class="cite-badge">
+            <i class="hgi-stroke hgi-award-02"></i>
+            Macedon Ranges Business Excellence Awards, 2016
+          </span>
+        </cite>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================================== GALLERY ======================================== -->
+  <section class="gallery">
+    <div class="container">
+      <div class="section-header section-header--center reveal">
+        <span class="eyebrow eyebrow--pill">Our Practice</span>
+        <h2 class="section-heading">A warm, welcoming space for every child</h2>
+        <p class="section-lede">Located at 15 Templeton Street in Woodend (entry via Urquhart Street), our clinic is designed to feel safe, calm, and fun for kids of all ages.</p>
+      </div>
+      <div class="gallery-grid reveal">
+        <div class="gallery-item">
+          <img
+            src="https://images.unsplash.com/photo-1620415069538-d8763e2fa2f5?ixid=M3w4ODc5NzR8MHwxfHNlYXJjaHwxfHxzcGVlY2glMjB0aGVyYXB5JTIwY2hpbGR8ZW58MXwwfHx8MTc3MjY4Nzc4NHww&ixlib=rb-4.1.0&w=800&h=600&fit=crop&q=80"
+            alt="Speech therapy session in a friendly clinical environment"
+            width="800"
+            height="600"
+            loading="lazy"
+          >
+          <div class="gallery-item-overlay">
+            <p>Evidence-based therapy in a play-based setting</p>
+          </div>
+        </div>
+        <div class="gallery-item">
+          <img
+            src="https://images.unsplash.com/photo-1549737221-bef65e2604a6?ixid=M3w4ODc5NzR8MHwxfHNlYXJjaHwxfHxjaGlsZCUyMGxlYXJuaW5nJTIwdG8lMjByZWFkfGVufDF8MHx8fDE3NzI2ODk2ODB8MA&ixlib=rb-4.1.0&w=800&h=600&fit=crop&q=80"
+            alt="Child learning to read with professional guidance"
+            width="800"
+            height="600"
+            loading="lazy"
+          >
+          <div class="gallery-item-overlay">
+            <p>Building literacy skills that last a lifetime</p>
+          </div>
+        </div>
+        <div class="gallery-item">
+          <img
+            src="https://images.unsplash.com/photo-1637195141628-f0f75585a07f?ixid=M3w4ODc5NzR8MHwxfHNlYXJjaHwyfHxjaGlsZCUyMGxlYXJuaW5nJTIwdG8lMjByZWFkfGVufDF8MHx8fDE3NzI2ODk2ODB8MA&ixlib=rb-4.1.0&w=800&h=600&fit=crop&q=80"
+            alt="Child reading independently in a comfortable environment"
+            width="800"
+            height="600"
+            loading="lazy"
+          >
+          <div class="gallery-item-overlay">
+            <p>A calm space where children feel at home</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================================== PROCESS ======================================== -->
+  <section class="process" id="process">
+    <div class="container">
+      <div class="section-header section-header--center reveal">
+        <span class="eyebrow eyebrow--pill">How It Works</span>
+        <h2 class="section-heading">From first call to real progress</h2>
+        <p class="section-lede">Getting started is straightforward. Here is what to expect when you reach out to our team.</p>
+      </div>
+      <div class="process-steps">
+        <div class="process-step reveal reveal-delay-1">
+          <div class="step-number">01</div>
+          <div class="step-icon">
+            <i class="hgi-stroke hgi-call"></i>
+          </div>
+          <h3>Get in Touch</h3>
+          <p>Call or email us. We will have a quick chat about your child and answer any initial questions you have.</p>
+          <div class="process-connector">
+            <i class="hgi-stroke hgi-arrow-right-02"></i>
+          </div>
+        </div>
+        <div class="process-step reveal reveal-delay-2">
+          <div class="step-number">02</div>
+          <div class="step-icon">
+            <i class="hgi-stroke hgi-stethoscope"></i>
+          </div>
+          <h3>Assessment</h3>
+          <p>We complete a thorough assessment to understand exactly where your child is at and what they need.</p>
+          <div class="process-connector">
+            <i class="hgi-stroke hgi-arrow-right-02"></i>
+          </div>
+        </div>
+        <div class="process-step reveal reveal-delay-3">
+          <div class="step-number">03</div>
+          <div class="step-icon">
+            <i class="hgi-stroke hgi-notebook-02"></i>
+          </div>
+          <h3>Therapy Plan</h3>
+          <p>We create a personalised therapy plan with clear goals, and share strategies you can practise at home.</p>
+          <div class="process-connector">
+            <i class="hgi-stroke hgi-arrow-right-02"></i>
+          </div>
+        </div>
+        <div class="process-step reveal reveal-delay-4">
+          <div class="step-number">04</div>
+          <div class="step-icon">
+            <i class="hgi-stroke hgi-checkmark-circle-02"></i>
+          </div>
+          <h3>Real Progress</h3>
+          <p>Regular sessions, progress reviews, and coordination with your child's school and other health professionals.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================================== FAQ ======================================== -->
+  <section class="faq" id="faq">
+    <div class="container">
+      <div class="section-header section-header--center reveal">
+        <span class="eyebrow eyebrow--pill">Common Questions</span>
+        <h2 class="section-heading">Answers parents are looking for</h2>
+      </div>
+      <div class="faq-list">
+        <div class="faq-item reveal">
+          <button class="faq-question" aria-expanded="false">
+            Do I need a referral from my GP to see a speech pathologist?
+            <i class="hgi-stroke hgi-plus-sign"></i>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">
+              No, you do not need a referral to book a private speech pathology appointment. You can call us directly. However, if you would like to claim through Medicare under a Chronic Disease Management plan, you will need a referral from your GP. We are also registered NDIS providers and can work with private health fund rebates.
+            </div>
+          </div>
+        </div>
+        <div class="faq-item reveal reveal-delay-1">
+          <button class="faq-question" aria-expanded="false">
+            What ages do you work with?
+            <i class="hgi-stroke hgi-plus-sign"></i>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">
+              We see children and teenagers from birth through to 18 years of age. Whether your toddler is late to talk or your teenager needs support with literacy and social communication, our team has the training and experience to help.
+            </div>
+          </div>
+        </div>
+        <div class="faq-item reveal reveal-delay-2">
+          <button class="faq-question" aria-expanded="false">
+            Can I use Medicare, NDIS, or private health insurance?
+            <i class="hgi-stroke hgi-plus-sign"></i>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">
+              Yes to all three. We are registered NDIS providers, and we can provide receipts for Medicare (with a valid GP management plan) and all major private health funds. We will help you understand your options and make the most of your available funding.
+            </div>
+          </div>
+        </div>
+        <div class="faq-item reveal reveal-delay-3">
+          <button class="faq-question" aria-expanded="false">
+            How do I know if my child needs speech therapy?
+            <i class="hgi-stroke hgi-plus-sign"></i>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">
+              Common signs include difficulty being understood by others, using fewer words than peers, trouble following instructions, stuttering, difficulty with reading and spelling, or challenges making friends. If you are unsure, give us a call. We are happy to chat about your concerns and advise whether an assessment would be helpful.
+            </div>
+          </div>
+        </div>
+        <div class="faq-item reveal reveal-delay-4">
+          <button class="faq-question" aria-expanded="false">
+            How long does speech therapy take to show results?
+            <i class="hgi-stroke hgi-plus-sign"></i>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">
+              Every child is different. Some children make significant progress within a few weeks, while others benefit from longer-term support. After the initial assessment, we will give you a clear picture of what to expect and set measurable goals so you can see progress along the way. Consistent home practice between sessions makes a big difference.
+            </div>
+          </div>
+        </div>
+        <div class="faq-item reveal reveal-delay-5">
+          <button class="faq-question" aria-expanded="false">
+            Where are you located and what are your hours?
+            <i class="hgi-stroke hgi-plus-sign"></i>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">
+              We are located at 15 Templeton Street, Woodend VIC 3442, with entry via Urquhart Street. We offer appointments during weekday hours. Give us a call on 0419 323 095 or email info@woodendspeech.com.au to find a time that works for your family.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================================== CTA BANNER ======================================== -->
+  <section class="cta-banner">
+    <div class="container">
+      <div class="cta-grid">
+        <div class="cta-content reveal">
+          <span class="eyebrow eyebrow--pill">Ready to Get Started?</span>
+          <h2>Give your child the confidence to communicate</h2>
+          <p>Book a session with our experienced team. No referral needed for private appointments. We will take it from there.</p>
+          <a href="tel:0419323095" class="btn btn--white">
+            <i class="hgi-stroke hgi-call"></i>
+            Book a Session
+          </a>
+          <div class="cta-contact-row">
+            <div class="cta-contact-item">
+              <i class="hgi-stroke hgi-call"></i>
+              <a href="tel:0419323095">0419 323 095</a>
+            </div>
+            <div class="cta-contact-item">
+              <i class="hgi-stroke hgi-mail-01"></i>
+              <a href="mailto:info@woodendspeech.com.au">info@woodendspeech.com.au</a>
+            </div>
+            <div class="cta-contact-item">
+              <i class="hgi-stroke hgi-location-01"></i>
+              <span>15 Templeton St, Woodend VIC 3442</span>
+            </div>
+          </div>
+        </div>
+        <div class="cta-image-wrapper reveal reveal-delay-2">
+          <img
+            src="https://images.unsplash.com/photo-1723035092325-03ad613d3dae?ixid=M3w4ODc5NzR8MHwxfHNlYXJjaHwyfHxzcGVlY2glMjB0aGVyYXB5JTIwY2hpbGR8ZW58MXwwfHx8MTc3MjY4Nzc4NHww&ixlib=rb-4.1.0&w=800&h=600&fit=crop&q=80"
+            alt="Child engaged and smiling during a therapy session"
+            width="800"
+            height="600"
+            loading="lazy"
+          >
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================================== FOOTER ======================================== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="logo-text">
+            Woodend Speech
+            <span>Paediatric Speech Pathology</span>
+          </div>
+          <p>Boutique paediatric speech pathology in the Macedon Ranges. Helping children communicate, read, and connect since 2002.</p>
+        </div>
+        <div class="footer-column">
+          <h4>Services</h4>
+          <ul>
+            <li><a href="#services">Speech Clarity</a></li>
+            <li><a href="#services">Language Development</a></li>
+            <li><a href="#services">Literacy Support</a></li>
+            <li><a href="#services">Social Skills</a></li>
+            <li><a href="#services">AAC</a></li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#process">How It Works</a></li>
+            <li><a href="#faq">FAQs</a></li>
+            <li><a href="https://www.woodendspeech.com.au" target="_blank" rel="noopener">Current Website</a></li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h4>Contact</h4>
+          <ul>
+            <li>
+              <a href="tel:0419323095">
+                <i class="hgi-stroke hgi-call"></i>
+                0419 323 095
+              </a>
+            </li>
+            <li>
+              <a href="tel:0354273309">
+                <i class="hgi-stroke hgi-call"></i>
+                (03) 5427 3309
+              </a>
+            </li>
+            <li>
+              <a href="mailto:info@woodendspeech.com.au">
+                <i class="hgi-stroke hgi-mail-01"></i>
+                info@woodendspeech.com.au
+              </a>
+            </li>
+            <li>
+              <a href="https://maps.google.com/?q=15+Templeton+Street+Woodend+VIC+3442" target="_blank" rel="noopener">
+                <i class="hgi-stroke hgi-location-01"></i>
+                15 Templeton St, Woodend
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>Website by <a href="https://linkjuice.com.au">Link Juice</a></span>
+        <div class="footer-credits">
+          Photos: Helena Lopes, Matteo Discardi, Josh Applegate, Stephen Andrews via Unsplash
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    /* ========================================
+       SCROLL REVEAL — IntersectionObserver
+       ======================================== */
+    (function() {
+      var revealElements = document.querySelectorAll('.reveal');
+      if (!revealElements.length) return;
+
+      // Respect reduced motion preference
+      if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+        revealElements.forEach(function(el) {
+          el.classList.add('visible');
+        });
+        return;
+      }
+
+      var observer = new IntersectionObserver(function(entries) {
+        entries.forEach(function(entry) {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+            observer.unobserve(entry.target);
+          }
+        });
+      }, {
+        threshold: 0.12,
+        rootMargin: '0px 0px -40px 0px'
+      });
+
+      revealElements.forEach(function(el) {
+        observer.observe(el);
+      });
+    })();
+
+    /* ========================================
+       HEADER SCROLL SHADOW
+       ======================================== */
+    (function() {
+      var header = document.querySelector('.site-header');
+      var scrolled = false;
+
+      window.addEventListener('scroll', function() {
+        if (window.scrollY > 20 && !scrolled) {
+          header.classList.add('scrolled');
+          scrolled = true;
+        } else if (window.scrollY <= 20 && scrolled) {
+          header.classList.remove('scrolled');
+          scrolled = false;
+        }
+      }, { passive: true });
+    })();
+
+    /* ========================================
+       MOBILE MENU
+       ======================================== */
+    (function() {
+      var hamburger = document.querySelector('.hamburger');
+      var mobileMenu = document.querySelector('.mobile-menu');
+      var menuLinks = mobileMenu.querySelectorAll('a');
+
+      hamburger.addEventListener('click', function() {
+        hamburger.classList.toggle('active');
+        mobileMenu.classList.toggle('open');
+        document.body.style.overflow = mobileMenu.classList.contains('open') ? 'hidden' : '';
+      });
+
+      menuLinks.forEach(function(link) {
+        link.addEventListener('click', function() {
+          hamburger.classList.remove('active');
+          mobileMenu.classList.remove('open');
+          document.body.style.overflow = '';
+        });
+      });
+    })();
+
+    /* ========================================
+       FAQ ACCORDION
+       ======================================== */
+    (function() {
+      var faqItems = document.querySelectorAll('.faq-item');
+
+      faqItems.forEach(function(item) {
+        var question = item.querySelector('.faq-question');
+        var answer = item.querySelector('.faq-answer');
+        var inner = item.querySelector('.faq-answer-inner');
+
+        question.addEventListener('click', function() {
+          var isActive = item.classList.contains('active');
+
+          // Close all others
+          faqItems.forEach(function(other) {
+            if (other !== item && other.classList.contains('active')) {
+              other.classList.remove('active');
+              other.querySelector('.faq-question').setAttribute('aria-expanded', 'false');
+              other.querySelector('.faq-answer').style.maxHeight = '0';
+            }
+          });
+
+          // Toggle current
+          if (isActive) {
+            item.classList.remove('active');
+            question.setAttribute('aria-expanded', 'false');
+            answer.style.maxHeight = '0';
+          } else {
+            item.classList.add('active');
+            question.setAttribute('aria-expanded', 'true');
+            answer.style.maxHeight = inner.scrollHeight + 'px';
+          }
+        });
+      });
+    })();
+
+    /* ========================================
+       SMOOTH SCROLL for anchor links
+       ======================================== */
+    (function() {
+      document.querySelectorAll('a[href^="#"]').forEach(function(anchor) {
+        anchor.addEventListener('click', function(e) {
+          var target = document.querySelector(this.getAttribute('href'));
+          if (target) {
+            e.preventDefault();
+            var headerOffset = 80;
+            var elementPosition = target.getBoundingClientRect().top;
+            var offsetPosition = elementPosition + window.scrollY - headerOffset;
+
+            window.scrollTo({
+              top: offsetPosition,
+              behavior: 'smooth'
+            });
+          }
+        });
+      });
+    })();
+  </script>
+
+</body>
+</html>
