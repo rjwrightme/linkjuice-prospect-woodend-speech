@@ -263,9 +263,8 @@
     }
 
     .logo img {
-      height: 48px;
+      height: 52px;
       width: auto;
-      border-radius: 8px;
     }
 
     .logo-text {
@@ -305,6 +304,7 @@
 
     .nav-cta {
       display: none;
+      color: var(--white) !important;
     }
 
     .hamburger {
@@ -636,7 +636,7 @@
 
     .service-card-icon {
       width: 48px;
-      height: 48px;
+      height: 52px;
       border-radius: 14px;
       display: flex;
       align-items: center;
@@ -1298,13 +1298,8 @@
         grid-template-columns: repeat(3, 1fr);
       }
 
-      .gallery-grid .gallery-item:first-child {
-        grid-row: span 2;
-      }
-
-      .gallery-grid .gallery-item:first-child img {
-        aspect-ratio: auto;
-        height: 100%;
+      .gallery-grid .gallery-item img {
+        aspect-ratio: 4 / 3;
       }
 
       .process-steps {
@@ -1338,11 +1333,7 @@
     <div class="container">
       <div class="header-inner">
         <a href="#" class="logo">
-          <img src="/logo.jpg" alt="Woodend Paediatric Speech Pathology logo">
-          <div class="logo-text">
-            Woodend Speech
-            <span>Paediatric Speech Pathology</span>
-          </div>
+          <img src="/woodend-paediatric-logo.svg" alt="Woodend Paediatric Speech Pathology logo">
         </a>
         <nav class="nav-desktop">
           <a href="#services">Services</a>
@@ -1837,10 +1828,7 @@
     <div class="container">
       <div class="footer-grid">
         <div class="footer-brand">
-          <div class="logo-text">
-            Woodend Speech
-            <span>Paediatric Speech Pathology</span>
-          </div>
+          <img src="/woodend-paediatric-logo.svg" alt="Woodend Paediatric Speech Pathology logo" style="height: 52px; width: auto;">
           <p>Boutique paediatric speech pathology in the Macedon Ranges. Helping children communicate, read, and connect since 2002.</p>
         </div>
         <div class="footer-column">
